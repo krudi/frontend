@@ -1,0 +1,35 @@
+# Generated directories and files
+dist/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+vendor/
+
+# Nextjs build output
+.next
+
+# Nuxtjs build output
+.nuxt
+
+# VuePress build output
+.vuepress/dist
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.tgz
+*.zip
