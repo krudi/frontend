@@ -52,6 +52,7 @@
         "markdownlint": "^0.25.1",
         "prettier": "^2.6.2",
         "progress-bar-webpack-plugin": "^2.1.0",
+        "scss-kit-sctructure": "^1.0.2",
         "stylelint": "^14.8.5",
         "stylelint-config-rational-order": "^0.1.2",
         "stylelint-config-recommended": "^7.0.0",
