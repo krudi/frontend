@@ -15,11 +15,13 @@
         "dev": "webpack --watch --progress --mode development",
         "watch": "webpack serve",
         "prod": "webpack --mode production && yarn lint-fix",
-        "lint:js": "eslint --ext .js",
-        "lint:js:fix": "eslint --fix --ext .js",
-        "lint:css": "stylelint .css,.scss .",
-        "lint:css:fix": "stylelint --fix .css,.scss .",
-        "lint:files": "npx prettier --write ."
+        "lint:js": "eslint --ext .js src/js/",
+        "lint:js:fix": "eslint --fix .js --ext src/js/",
+        "lint:css": "stylelint .css,.scss src/scss/",
+        "lint:css:fix": "stylelint --fix .css,.scss src/scss/",
+        "lint:files": "npx prettier --write .",
+        "lint": "yarn lint:js && yarn lint:css",
+        "lint-fix": "yarn lint:js:fix && yarn lint:css:fix"
     },
     "engines": {
         "node": "^14.16.0 || ^16.11.0 || ^17.0.0"
