@@ -18,45 +18,14 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.module\.s(a|c)ss$/,
+                test: /\.(s*)css$/,
+                exclude: /\.module.(s(a|c)ss)$/,
                 use: [
                     isDevelopment
                         ? 'style-loader'
                         : MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: isDevelopment,
-                            modules: true
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: isDevelopment,
-                            modules: true
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                plugins: [['autoprefixer']]
-                            }
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                exclude: /\.module.(s(a|c)ss)$/,
-                use: [
-                    isDevelopment
-                        ? 'style-loader'
-                        : MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    {
-                        loader: 'sass-loader',
                         options: {
                             sourceMap: isDevelopment
                         }
@@ -67,6 +36,12 @@ const config = {
                             postcssOptions: {
                                 plugins: [['autoprefixer']]
                             }
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: isDevelopment
                         }
                     }
                 ]
